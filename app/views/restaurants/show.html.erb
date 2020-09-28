@@ -12,3 +12,9 @@
     <% end %>
   <% end %>
 </div>
+
+<!-- review está aninhado dentro de restaurant, nas rotas!!! -->
+<%= simple_form_for([ @restaurant, @review ]) do |f| %>
+  <%= f.input :content, as: :text %>
+  <%= f.button :submit %>
+<% end %>
